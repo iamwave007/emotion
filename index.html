@@ -1,0 +1,68 @@
+<script>
+var happyCount=0;
+var angerCount=0;
+var happy=["adore","affable","aggreeable","amiable","amusing","animated","appealing","as happy as a clam beaming","beatific","beautiful","bliss","blissful","blithe","buoyant","carefree","charming","cheerful","cheeriness","cheery","chipper","chirpy","content","contented","delight","delighted","delightful","diverting","droll","ebullient ","ecstasy","ecstatic","elated","enchanting","endearing","energized","engaging","enjoyable","entertaining","euphoria","euphoric","excited","exhilirated","exuberance","exultant","fine","friendly","fulfilled","fun","funny","genial","get a kick out of","glad","gladden","glee","glory","glory in","glorious","good","good humored","good mood","good natured","grateful","gratified","gratify","gratifying","great","happy","happy as a clam","heartening","heartwarming","heavenly","high","high spirits","hilarious","hopeful","in a good mood","in good spirits","in seventh heaven","jollity","joy","joyfulness","joyous","jubilation","jumping for joy","lap up","lighthearted","likable","lovable","lovely","lucky","merry","mirth","nice","obliging","on cloud nine","on top of the world","open","opportune","optomistic","overjoyed","over the moon","paradise","perkiness","perky","pleasant","pleased","please greatly","pleasure","precious","radiant","rapture","rapturous","relaxed","relish","revel in satisfied","savor","seventh heaven","simpatico","smiling","source of pleasure","sparkle","stimulated","sunniness","sunny","sweet","take pleasure in","tears of joy","thrill","thrilled","tickled pink","touching","treat","triumph","upbeat","uplifting","untroubled","vitalized","vivacity","walking on air","welcoming","willing","wondrous","zest for life"]
+
+
+
+
+var happySingle=["adore","amused", "affable", "aggreeable", "amiable", "amusing", "animated", "appealing", "beatific", "beautiful", "beaming","blissful","blithe","buoyant","bliss", "blissful", "blithe", "buoyant", "carefree", "charming", "cheerful", "cheeriness", "cheery", "chipper", "chirpy", "content", "contented", "delight", "delighted", "delightful", "diverting", "droll", "ecstasy", "ecstatic", "elated", "enchanting", "endearing","enjoying", "energized", "engaging", "enjoyable", "entertaining", "euphoria", "euphoric", "excited", "exhilirated", "exuberance", "exultant", "fine", "friendly", "fulfilled", "fun", "funny","funniest", "genial", "glad", "gladden", "glee", "glory", "glorious", "good", "grateful", "gratified", "gratify", "gratifying", "great", "happy","happiest", "heartening", "heartwarming", "heavenly", "high", "hilarious", "hopeful", "jollity", "joy", "joyfulness", "joyous", "jubilation", "lighthearted", "likable", "lovable", "lovely", "lucky","luckiest", "merry", "mirth", "nice", "obliging","open", "opportune", "optomistic", "overjoyed", "paradise", "perkiness", "perky", "pleasant", "pleased", "pleasure", "precious", "radiant", "rapture", "rapturous", "relaxed", "relish", "savor", "simpatico", "smiling", "sparkle", "stimulated", "sunniness", "sunny","sunniest", "sweet","sweetest", "thrill", "thrilled", "touching", "treat", "triumph", "upbeat", "uplifting", "untroubled", "vitalized", "vivacity", "welcoming", "willing", "wondrous","best"];
+
+var happyMulti=["as happy as a clam beaming", "ebullient ",  "get a kick out of", "glory in", "good humored", "good mood","good natured", "happy as a clam",  "high spirits", "in a good mood", "in a good mood", "in a good mood", "in a good mood", "in good spirits", "in seventh heaven",  "jumping for joy",  "lap up", "on cloud nine", "on top of the world", "over the moon", "please greatly",  "revel in satisfied",  "source of pleasure", "take pleasure in", "tears of joy", "tickled pink",  "walking on air", "zest for life"];
+
+
+////=======================================
+// sort out single or multiple words
+
+// happy.forEach(function(hap){
+//   var temp=hap.split(" ");
+  // for(var i=0,len=temp.length;i<len;i++){
+  //   if(len==1){
+  //     if(happySingle1.length<80){
+  //       happySingle1.push(hap);
+  //     }else{
+  //       happySingle2.push(hap);
+  //     }
+  //   }else{
+  //     // happyMulti.push(hap);
+  //   }
+  // }
+// })
+
+////=======================================
+
+// find the "happy" word;
+var mock=["on cloud nine", "on top of the world","seventh heaven","zest of life", "tickled pink"];
+
+// var line="When I got an A, I was on my phone, I was like in the seventh heaven"
+var line="i graduated; I was very excited about what's gonna happen next, and ready to look for my zest for life "
+
+var lineArr=line.split(" ");
+
+//look for single happy word match
+for (var i = 0, len = lineArr.length; i < len; i++) {
+  if(happySingle.indexOf(lineArr[i])> -1){
+    console.log("i'm happy because I said I am:... ")
+    console.log(lineArr[i]);
+  }
+}
+
+//look for multiple happy word match
+
+for(var i=0,len=lineArr.length;i<len-1;i++){
+  happyMulti.forEach(function(mHap){
+    var t2=lineArr[i]+" "+lineArr[i+1]
+    if(mHap.includes(t2)){
+      console.log(t2);
+    }
+  })
+}
+
+// using strigkes for each type of emotion;
+// var happyStrike=0;
+
+
+
+</script>
+
+
